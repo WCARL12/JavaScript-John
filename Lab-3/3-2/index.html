@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stairs</title>
+</head>
+<body>        
+    <script>
+        // "use strict";
+        let height = prompt("Enter # of stairs: ")
+        // let height = 1;
+        let stairs = ""
+        let counter = 0
+
+        for(; counter < height; counter++){
+            stairs += "#"
+            console.log(stairs)
+        }
+
+        while (counter >= 1){
+            console.log(stairs.slice(0, counter - stairs.length - 1));
+            counter--;
+        
+            
+        }
+        
+
+    </script>
+</body>
+</html>

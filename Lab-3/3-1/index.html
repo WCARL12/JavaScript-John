@@ -7,15 +7,37 @@
     <script>
       "use strict";
 
-      const guess = prompt("Enter a guess for the coin flip (heads/tails)");
+      const userGuess = prompt("Enter a guess for the coin flip (heads/tails)");
+      const randomNum = Math.floor(Math.random() * 2) + 1;
+      
+      let coinGuess;
+      
 
-      while (guess != "tails" && guess != "heads") {
-        const guess = prompt("Invalid input please try again,  (heads/tails)");
+      if (userGuess === 'tails' || userGuess === 'heads'){
+        console.log(randomNum);
+        
+        switch (randomNum){
+          case 1:
+            coinGuess = 'heads'
+            break;
+          case 2:
+            coinGuess = 'tails'
+            break;
+        }
+        
+        if (coinGuess === userGuess){
+          alert(`You guessed ${userGuess}\nThe coin was ${coinGuess}\nYou Win!`)
+        }
+        else{
+          alert(`You guessed ${userGuess}\nThe coin was ${coinGuess}\nYou Lose!`)
+        }
+
+      }
+      else{
+        alert("Invalid input please try again.");
       }
 
-      console.log(guess);
 
-      alert("You guessed " + guess + "\n.");
     </script>
   </body>
 </html>
