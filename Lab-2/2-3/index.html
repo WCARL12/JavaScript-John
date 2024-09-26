@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geometry Calculator</title>
+    </head>
+    <body>        
+        <script>
+            "use strict";
+
+            const sideA = parseInt(prompt("SideA: "))
+            const sideB = parseInt(prompt("SideB: "))
+
+            const area = (sideA * sideB);
+            const perimeter = ((sideA + sideB) * 2);
+            const hypotenuse = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2))
+            
+            console.log(`Side A: ${sideA}`);
+            console.log(`Side B: ${sideB}`);
+            console.log(`Perimeter: ${perimeter}`);
+            console.log(`Area: ${area}`);
+            console.log(`Hypotenuse: ${hypotenuse.toFixed(4)}`);
+
+        
+
+        </script>
+    </body>
+</html>

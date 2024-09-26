@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin Toss</title>
+  </head>
+  <body>
+    <script>
+      "use strict";
+
+      const guess = prompt("Enter a guess for the coin flip (heads/tails)");
+
+      while (guess != "tails" && guess != "heads") {
+        const guess = prompt("Invalid input please try again,  (heads/tails)");
+      }
+
+      console.log(guess);
+
+      alert("You guessed " + guess + "\n.");
+    </script>
+  </body>
+</html>
