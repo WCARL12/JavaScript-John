@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Grade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <h1>Sum of Numbers</h1>
+    <script>
+        let choice = "y";
+        console.log(); 
+        
+        do {
+            let sum = parseInt(prompt('Enter any top number to sum\nfrom 1 through 100'))
+            let result = 0;
+            
+            if (sum < 1 || sum > 100){
+                alert("Please enter a number between 1-100")
+            }
+            else{
+                for (let i = sum; i >= 1; i--){
+                    // result *= sum
+                    result += i
+                }
+                document.writeln(`<p>The sum of the numbers from 1 though ${sum} is ${result}</p>`)
+                choice = prompt("Do another sum?")
+            }
+            
+        } while (choice === 'y');
+    </script>
+</body>
+</html>
