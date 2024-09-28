@@ -9,22 +9,30 @@
 <body>
         <h1>Sum of Numbers</h1>
     <script>
+
+        // Default choice value is "y" for the loop
         let choice = "y";
-        console.log(); 
         
         do {
+            // Ask the user for the input sum number
             let sum = parseInt(prompt('Enter any top number to sum\nfrom 1 through 100'))
             let result = 0;
             
+            // Displays the error message if input sum number is NOT between 1 - 100
             if (sum < 1 || sum > 100){
                 alert("Please enter a number between 1-100")
             }
+
+            // If input IS between 1-100 this will give you the total sum of the inputted number.
             else{
                 for (let i = sum; i >= 1; i--){
-                    // result *= sum
                     result += i
                 }
+
+                // Prints the sum of the number in the website
                 document.writeln(`<p>The sum of the numbers from 1 though ${sum} is ${result}</p>`)
+
+                // Ask the user if it wants to do another sum
                 choice = prompt("Do another sum?")
             }
             
