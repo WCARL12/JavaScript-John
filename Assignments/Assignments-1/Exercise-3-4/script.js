@@ -14,11 +14,11 @@ function getSalesByQuarter(regions){
     document.write("<h2>Sales by Quarter</h2>")
     let regionIteration = 0;
 
-    // Iterate through each region
     for (region of regions){
         let salesByRegion = 0;
         for (sales in region){
-            // I am doing regions[sales][regionIteration] because I need to go by column. 
+
+            // Going by columns
             salesByRegion += regions[sales][regionIteration]
         }
 

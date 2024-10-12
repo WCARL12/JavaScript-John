@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prices</title>
+    </head>
+    <body>        
+        <script>
+            "use strict";
+
+            const pricesEntry = prompt(
+                "Enter a list of prices separated by commas.", 
+                "9.99,-10.99,11.99,12.99,14.99");
+
+            // split string into array
+            let prices = pricesEntry.split(",");
+            
+            // convert prices from strings to a numbers
+            for (let i in prices){
+                prices[i] = parseFloat(prices[i])
+            }
+
+            // delete prices less than 0
+            const validPrices = [];
+            for (let price of prices){
+                if (price <= 0){
+                    alert("Invalid Price Deleted: " + price)
+                }
+                else{
+                    validPrices.push(price)
+                }
+            }
+            // calculate total and count of valid prices
+            let validPriceTotal = 0;
+            let lengthPriceTotal = 0;
+            for(let price of validPrices){
+                // Check count
+                lengthPriceTotal += 1;
+                validPriceTotal += price;
+            }
+
+            // check count and display result
+            const newPriceTotal = validPriceTotal - (validPriceTotal * .10); 
+            alert(`Old total: ${validPriceTotal}\n${lengthPriceTotal} items earns a 10% discount!\nNew total: ${newPriceTotal.toFixed(2)}`)
+
+
+
+        </script>
+    </body>
+</html>
