@@ -1,0 +1,53 @@
+<!-- <!doctype html>
+<html lang="en-US">
+    <body>
+    <div id="parent"><p>Hello World</p></div>
+    <script>
+        const parent = document.getElementById('parent');
+        console.log(parent.firstChild.innerText); // Outputs the text node (whitespace/newline before <p>)
+    </script> -->
+
+        <!-- <div id="first">First</div>
+        <div id="second">Second</div>
+        <div id="third">Third</div>
+    <script>
+        const firstDiv = document.getElementById('first');
+        console.log(firstDiv.nextElementSibling); // Outputs the second <div>
+    </script> -->
+
+    
+  <!-- </body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        HTML | DOM nodeValue Property
+    </title>
+</head>
+<body>
+    <center>
+        <h1 style="color:green">GeeksforGeeks</h1>
+        <p>
+            Click the button get the node value of
+            the first button element in the document.
+        </p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="geeks"></p>
+        <script>
+            function myFunction() {
+                let g = document.getElementsByTagName("BUTTON")[0]
+                console.log(g);
+                
+                // let f = g.childNodes[0].nodeValue;
+                // document.getElementById("geeks").innerHTML = f;
+            }
+        </script>
+    </center>
+</body>
+</html>
