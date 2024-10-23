@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Cook Fried Rice</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function createElement(element){
+        return document.createElement(element)
+    }
+
+    const body = document.body;
+    const headerTitle = createElement("h1");
+    headerTitle.textContent = "What Ingredients Needed to Make Fried Rice?";
+    
+    const imageOfDish = createElement("img");
+    imageOfDish.setAttribute("src", "./fried-rice.jpg");
+
+    const recipePara = createElement("h3");
+    recipePara.textContent = "Fried Rice Ingredients: "
+
+    const ingredientStructure = createElement("ul");
+    const ingredientsList = ["1 cup of rice", "2-3 cloves of garlic", "1 small chopped onion", "Mixed Vegetables", "2 eggs", "2-3 tablespoons of soy sauce"];
+    for (ingredient in ingredientsList){
+        const ingredientAdd = createElement("li");
+        ingredientAdd.textContent = ingredientsList[ingredient];
+        ingredientAdd.classList.add("ingredients")
+        ingredientStructure.append(ingredientAdd);
+    }
+
+
+    body.append(headerTitle, imageOfDish, recipePara, ingredientStructure)
+    
+</script>
+</html>
