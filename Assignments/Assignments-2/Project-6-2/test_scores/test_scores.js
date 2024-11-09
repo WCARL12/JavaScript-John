@@ -114,4 +114,13 @@ function clearDisplay(){
     scoreInput.value = "";
     resultDiv.replaceChildren();
     scoreDiv.replaceChildren();
+    students = [];
+    studentScore = [];
+    highScoreName = null;
+    lowScoreName = null;
+    highScore = null;
+    lowScore = null;
+    averageScore = null;
+    displayError(nameErrorMessage, "");
+    displayError(gradeErrorMessage, "");
 }

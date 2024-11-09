@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+     function createElement(element){
+        return document.createElement(element)
+    }
+
+    const body = document.body;
+
+    const headerTitle = createElement("h1");
+    headerTitle.textContent = "Sorry that website does not exist :("
+
+    headerTitle.style = "text-align: center; font-family: Arial; font-style: bold";
+
+    body.append(headerTitle);
+</script>
+</html>

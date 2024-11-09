@@ -29,9 +29,17 @@ const displayInvoice = () => {
     // calculate days until due and display
     // console.log(dueDate - todayDate.;
 
+    const msUntilDue = dueDate.getTime() - todayDate.getTime();
     const msPerDay = 24 * 60 * 60 * 1000;
-    const msUntilDue = Math.round((dueDate.getTime() - todayDate.getTime()) / msPerDay);
-    output += "Days Until Due: " + daysUntilDue + " Days\n";
+    // const msUntilDue = Math.round((dueDate.getTime() - todayDate.getTime()) / msPerDay);
+    const daysToDue = Math.ceil(msUntilDue / msPerDay);    
+    if (daysToDue == 0) {
+        output += "Due TODAY\n";        
+    } else if (daysToDue < 0) {
+        output += Math.abs(daysToDue) + " days o\n";
+    } else {
+        output += "Due in " + daysToDue + " days\n";
+    }
     
     
     alert(output);

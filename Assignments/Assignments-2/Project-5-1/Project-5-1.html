@@ -8,9 +8,10 @@
   <body>
     <script>
       let numberInput = prompt("Enter test scores seperated by commas. ");
-      let numberList = numberInput.split(",");
+      let numberList;
       
       function changeStringToNumber(){
+        numberList = numberInput.split(",");
         for (number in numberList) {
           numberList[number] = parseInt(numberList[number]);
         }

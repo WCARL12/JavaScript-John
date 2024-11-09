@@ -31,9 +31,18 @@
         ingredientAdd.classList.add("ingredients")
         ingredientStructure.append(ingredientAdd);
     }
-
-
-    body.append(headerTitle, imageOfDish, recipePara, ingredientStructure)
+    
+    const link = createElement("a");
+    link.textContent = "Free fried rice"
+    link.setAttribute("href", "./freefriedrice.html")
+    
+    const paraMoreDetails = createElement("p");
+    paraMoreDetails.textContent = "Click here to get a free Fried Rice:  "
+    paraMoreDetails.style = "font-weight: bold; font-size: 20px";
+    paraMoreDetails.append(link);
+    
+    
+    body.append(headerTitle, imageOfDish, paraMoreDetails,  recipePara, ingredientStructure)
     
 </script>
 </html>
