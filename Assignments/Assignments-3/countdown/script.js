@@ -1,23 +1,21 @@
-const eventDate = new Date("11/25/2024");
-
+const dueDate = new Date("11/22/2024");
 let todayDate = new Date(Date.now());
+let remainingDay =  new Date(dueDate);
 
 
-// dueDate.setDate(dueDate.getDate() - eventDate.getDate())
-// console.log(todayDate.getDate());
-// dueDate.getMilliseconds
-// eventDate.setDate(eventDate.getDate() + 30)
-// console.log(eventDate);
-// dueDate = dueDate.getTime();
-let msUntilDue = eventDate.getTime() - todayDate.getTime();
-let days = (msUntilDue / 1000) / 86400;
+let msUntilDue = dueDate.getTime() - todayDate.getTime();
 
-msUntilDue = (eventDate.getTime() - todayDate.getTime());
-let hours =  (msUntilDue / 1000) / 3600;
-// let hours =  (msUntilDue / 1000) / 3600;
+let days = Math.floor(((msUntilDue / 1000) / 86400));
+let hours = Math.floor((((msUntilDue / 1000) / 3600) - 24 * days))
+let minutes = Math.floor( (((msUntilDue / 1000) / 60) - 60 * hours))
+let seconds = Math.floor(60 - todayDate.getSeconds())
+
 
 console.log(days);
 console.log(hours);
+console.log(minutes);
+console.log(seconds);
+
 
 
 
