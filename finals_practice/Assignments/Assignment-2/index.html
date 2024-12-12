@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const allScorePara = document.createElement("p");
+        const body = document.body;
+        let scores = prompt("Enter a test scores seperated by commas. ")
+        scores = scores.split(", ")
+        allScorePara.innerText = `Scores = ${scores}`
+        body.appendChild(allScorePara);
+        
+        
+        
+        
+    </script>
+</body>
+</html>
